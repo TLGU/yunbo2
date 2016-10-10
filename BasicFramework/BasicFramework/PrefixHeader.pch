@@ -1,0 +1,54 @@
+//
+//  PrefixHeader.pch
+//  BasicFramework
+//
+//  Created by Rainy on 16/8/18.
+//  Copyright © 2016年 Rainy. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <Reachability/Reachability.h>
+#import <MyObjectCoding/NSObject+NSCoding.h>
+#import <JSONModel/JSONModel.h>
+//系统主题定义(颜色字体)
+#import "Theme.h"
+//常用宏定义
+#import "CommonDefine.h"
+//网络地址定义
+#import "HTTPURLDefine.h"
+//常量
+#import "Constants.h"
+//分类和工具
+#import "UIImage+SPIExtension.h"
+
+
+#import "UIView+Extension.h"
+
+#import "NSObject+YGTool.h"
+
+#import "NSString+LBKJExtenison.h"
+
+#import "UIDevice-Hardware.h"
+
+#import "DFYGProgressHUD.h"
+
+#import "AppSingle.h"
+
+#import "NetWorkManager.h"
+
+#import <Masonry/Masonry.h>
+
+#import <JSONModel/JSONModel.h>
+
+//三方key值
+#import "CommonAppKey.h"
+
+
+#endif /* PrefixHeader_pch */
