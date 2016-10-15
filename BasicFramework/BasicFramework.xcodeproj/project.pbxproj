@@ -37,6 +37,7 @@
 		0F42FC781D9A509000D20647 /* ChargeTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F42FC761D9A509000D20647 /* ChargeTypeCell.xib */; };
 		0F42FC7A1D9A51AC00D20647 /* ChargeHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F42FC791D9A51AC00D20647 /* ChargeHeader.xib */; };
 		0F42FC7D1D9A51BE00D20647 /* ChargeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F42FC7C1D9A51BE00D20647 /* ChargeHeader.m */; };
+		0F660D9C1DB1C26700C87FCD /* FileCutUperAndSpliter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F660D9B1DB1C26700C87FCD /* FileCutUperAndSpliter.m */; };
 		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
@@ -164,6 +165,8 @@
 		0F42FC791D9A51AC00D20647 /* ChargeHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChargeHeader.xib; sourceTree = "<group>"; };
 		0F42FC7B1D9A51BE00D20647 /* ChargeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeHeader.h; sourceTree = "<group>"; };
 		0F42FC7C1D9A51BE00D20647 /* ChargeHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeHeader.m; sourceTree = "<group>"; };
+		0F660D9A1DB1C26700C87FCD /* FileCutUperAndSpliter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCutUperAndSpliter.h; sourceTree = "<group>"; };
+		0F660D9B1DB1C26700C87FCD /* FileCutUperAndSpliter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCutUperAndSpliter.m; sourceTree = "<group>"; };
 		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -442,6 +445,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0F660D991DB1C1F600C87FCD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0F660D9A1DB1C26700C87FCD /* FileCutUperAndSpliter.h */,
+				0F660D9B1DB1C26700C87FCD /* FileCutUperAndSpliter.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		156971422705F69389BE6F64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -624,6 +636,7 @@
 		36111AB61D6EE58C00A03BF4 /* Public(公共) */ = {
 			isa = PBXGroup;
 			children = (
+				0F660D991DB1C1F600C87FCD /* Util */,
 				36111AB71D6EE58C00A03BF4 /* Controller */,
 				36111AB91D6EE58C00A03BF4 /* Model */,
 				36111ABB1D6EE58C00A03BF4 /* Other */,
@@ -1255,6 +1268,7 @@
 				C8A99CD61D9655DE00633A0D /* NHCustomNoNetworkEmptyView.m in Sources */,
 				364DA6281D6584F400F6F424 /* UIScrollView+UITouch.m in Sources */,
 				364DA6551D6584F400F6F424 /* UIView+MJExtension.m in Sources */,
+				0F660D9C1DB1C26700C87FCD /* FileCutUperAndSpliter.m in Sources */,
 				364DA6331D6584F400F6F424 /* RootViewController.m in Sources */,
 				364DA6211D6584F400F6F424 /* UIBarButtonItem+DFYGExtension.m in Sources */,
 				C8A99CDC1D965A1200633A0D /* BasicMainTBC.m in Sources */,

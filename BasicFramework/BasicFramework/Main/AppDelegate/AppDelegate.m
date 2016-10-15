@@ -110,6 +110,8 @@
     
     [self setMyWindowAndRootViewController];
     
+    
+    
     [self.window makeKeyAndVisible];
     
     
