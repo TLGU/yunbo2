@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -9,14 +9,49 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCellID" id="gTV-IL-0wX" customClass="HomeCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="293" height="148"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="293" height="148"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="傲慢与偏见是根据傲慢与偏见是根据傲慢与偏见是根据傲慢与偏见是根据" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZv-LZ-MZc">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7ER-nK-IoS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.62352941176470589" green="0.61960784313725492" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="傲慢与偏见" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDH-P2-3nL">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="ywG-u0-78P"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hometextimage" translatesAutoresizingMaskIntoConstraints="NO" id="PZq-jX-U8o"/>
+                </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.33198191189999998" blue="0.2141803977" alpha="1" colorSpace="calibratedRGB"/>
-            <point key="canvasLocation" x="-337" y="19"/>
+            <color key="backgroundColor" red="0.87450980392156863" green="0.8784313725490196" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="RZv-LZ-MZc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="6TL-YP-PjY"/>
+                <constraint firstAttribute="trailing" secondItem="RZv-LZ-MZc" secondAttribute="trailing" constant="10" id="GuT-vX-aPl"/>
+                <constraint firstItem="CDH-P2-3nL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="JbN-kf-Ibf"/>
+                <constraint firstItem="PZq-jX-U8o" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KfX-Kx-5tu"/>
+                <constraint firstItem="PZq-jX-U8o" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Yi3-75-vcI"/>
+                <constraint firstAttribute="trailing" secondItem="CDH-P2-3nL" secondAttribute="trailing" constant="10" id="ari-Lo-Op4"/>
+                <constraint firstItem="RZv-LZ-MZc" firstAttribute="top" secondItem="CDH-P2-3nL" secondAttribute="bottom" id="imm-eA-z57"/>
+                <constraint firstAttribute="trailing" secondItem="PZq-jX-U8o" secondAttribute="trailing" id="isE-wJ-VAL"/>
+                <constraint firstItem="CDH-P2-3nL" firstAttribute="top" secondItem="PZq-jX-U8o" secondAttribute="bottom" id="tuV-U1-El8"/>
+                <constraint firstAttribute="bottom" secondItem="RZv-LZ-MZc" secondAttribute="bottom" id="ybT-Zc-ubh"/>
+            </constraints>
+            <size key="customSize" width="293" height="148"/>
+            <point key="canvasLocation" x="-249.5" y="-76"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="hometextimage" width="133" height="79"/>
+    </resources>
 </document>

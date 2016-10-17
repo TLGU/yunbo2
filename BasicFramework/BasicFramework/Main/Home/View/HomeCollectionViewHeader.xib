@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -40,7 +40,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xex-ST-Wm9">
-                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.87450980389999999" green="0.87843137250000003" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,10 +134,11 @@
                 <constraint firstAttribute="trailing" secondItem="Ivv-Vn-L5Q" secondAttribute="trailing" id="j65-Xf-suY"/>
             </constraints>
             <connections>
+                <outlet property="adView" destination="xex-ST-Wm9" id="4RO-qj-7vn"/>
                 <outlet property="leftView" destination="mMJ-S9-Fn1" id="NIm-tC-TGq"/>
                 <outlet property="rightView" destination="YXN-z6-cRa" id="vGC-fk-Wv1"/>
             </connections>
-            <point key="canvasLocation" x="-14.5" y="-547.5"/>
+            <point key="canvasLocation" x="-422" y="-540"/>
         </collectionReusableView>
     </objects>
     <resources>
