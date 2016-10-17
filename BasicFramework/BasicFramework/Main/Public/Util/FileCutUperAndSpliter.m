@@ -76,6 +76,7 @@
 //        
 //    }
 //    //创建目标文件
+    
 //    NSFileManager *fileManager = [[NSFileManager alloc] init];
 //    
 //    NSString *pathDocuments = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
