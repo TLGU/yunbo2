@@ -33,18 +33,21 @@ static NSString * reusableCellIdForMakeMoney=@"reusableCellIdForMakeMoney";
     return _dataArray;
 }
 
--(void)viewWillAppear:(BOOL)animated{
+-(void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=YES;
     
 }
 
--(void)viewWillDisappear:(BOOL)animated{
+-(void)viewWillDisappear:(BOOL)animated
+{
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.hidden=NO;
 }
 
--(MakeMoneyHeader *)header{
+-(MakeMoneyHeader *)header
+{
     if (!_header) {
         _header=[MakeMoneyHeader header];
         [_header setFrame:CGRectMake(0, 0, kScreenWidth, 100)];

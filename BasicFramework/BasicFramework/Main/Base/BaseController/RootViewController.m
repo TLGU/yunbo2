@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "YSLContainerViewController.h"
+#import "VedioHomeViewController.h"
 @interface RootViewController ()<YSLContainerViewControllerDelegate>
     
     @end
@@ -17,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIViewController *vc1=[UIViewController new];vc1.title=@"影视";
+    VedioHomeViewController *vc1=[VedioHomeViewController new];vc1.title=@"影视";
     UIViewController *vc2=[UIViewController new];vc2.title=@"VR";
     YSLContainerViewController *containerVC = [[YSLContainerViewController alloc]initWithControllers:@[vc1,vc2]
                                                                                         topBarHeight:20
@@ -32,7 +33,7 @@
     [self.view addSubview:containerVC.view];
     [self containerViewItemIndex:0 currentController:vc1];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:LoginStatus_Changed object:nil];
     
 }
 
