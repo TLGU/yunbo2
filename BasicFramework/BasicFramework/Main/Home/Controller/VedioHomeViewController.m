@@ -9,6 +9,7 @@
 #import "VedioHomeViewController.h"
 #import "HomeCollectionViewCell.h"
 #import "HomeCollectionViewHeader.h"
+#import "SearchListViewController.h"
 #define itemWidth (kScreenWidth-4)/2.0f
 #define itemHeight (kScreenHeight-49)/4.0f
 #define collectionViewHeaderHeight itemHeight*2.0f-40
@@ -42,6 +43,7 @@ static NSString *HomeCollectionViewHeaderID=@"HomeCollectionViewHeaderID";
         _collectionView.contentInset=UIEdgeInsetsMake(0, 0, 49, 0);
         _collectionView.scrollIndicatorInsets=_collectionView.contentInset;
         [_collectionView registerNib:[UINib nibWithNibName:@"HomeCollectionViewHeader" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HomeCollectionViewHeaderID];
+        
         
     }
     return _collectionView;
@@ -87,6 +89,11 @@ static NSString *HomeCollectionViewHeaderID=@"HomeCollectionViewHeaderID";
         return header;
     }
     return nil;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    SearchListViewController *vc=[SearchListViewController new];
+    [self pushVc:vc];
 }
 
 

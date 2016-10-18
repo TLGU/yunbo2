@@ -47,6 +47,16 @@
 		0FD36AA71DB5B4490067EDC1 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD36AA51DB5B4490067EDC1 /* CommentViewController.m */; };
 		0FD36AA81DB5B4490067EDC1 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD36AA61DB5B4490067EDC1 /* CommentViewController.xib */; };
 		0FD36AAB1DB5B4610067EDC1 /* VRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD36AAA1DB5B4610067EDC1 /* VRViewController.m */; };
+		0FD36AB41DB5CB240067EDC1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD36AB21DB5CB240067EDC1 /* SearchViewController.m */; };
+		0FD36AB51DB5CB240067EDC1 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD36AB31DB5CB240067EDC1 /* SearchViewController.xib */; };
+		0FD36AB91DB5CD2A0067EDC1 /* SearchVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD36AB71DB5CD2A0067EDC1 /* SearchVCCell.m */; };
+		0FD36ABA1DB5CD2A0067EDC1 /* SearchVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD36AB81DB5CD2A0067EDC1 /* SearchVCCell.xib */; };
+		0FD36ABC1DB5CFC00067EDC1 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD36ABB1DB5CFC00067EDC1 /* SearchView.xib */; };
+		0FD36ABF1DB5CFD60067EDC1 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD36ABE1DB5CFD60067EDC1 /* SearchView.m */; };
+		0FD36AC31DB5F8300067EDC1 /* SearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD36AC11DB5F8300067EDC1 /* SearchListViewController.m */; };
+		0FD36AC41DB5F8300067EDC1 /* SearchListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD36AC21DB5F8300067EDC1 /* SearchListViewController.xib */; };
+		0FD36AC81DB5F9820067EDC1 /* SearchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD36AC61DB5F9820067EDC1 /* SearchListCell.m */; };
+		0FD36AC91DB5F9820067EDC1 /* SearchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD36AC71DB5F9820067EDC1 /* SearchListCell.xib */; };
 		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
@@ -191,6 +201,21 @@
 		0FD36AA61DB5B4490067EDC1 /* CommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
 		0FD36AA91DB5B4610067EDC1 /* VRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRViewController.h; sourceTree = "<group>"; };
 		0FD36AAA1DB5B4610067EDC1 /* VRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRViewController.m; sourceTree = "<group>"; };
+		0FD36AB11DB5CB240067EDC1 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		0FD36AB21DB5CB240067EDC1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		0FD36AB31DB5CB240067EDC1 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		0FD36AB61DB5CD2A0067EDC1 /* SearchVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVCCell.h; sourceTree = "<group>"; };
+		0FD36AB71DB5CD2A0067EDC1 /* SearchVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVCCell.m; sourceTree = "<group>"; };
+		0FD36AB81DB5CD2A0067EDC1 /* SearchVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchVCCell.xib; sourceTree = "<group>"; };
+		0FD36ABB1DB5CFC00067EDC1 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		0FD36ABD1DB5CFD60067EDC1 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		0FD36ABE1DB5CFD60067EDC1 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		0FD36AC01DB5F82F0067EDC1 /* SearchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchListViewController.h; sourceTree = "<group>"; };
+		0FD36AC11DB5F8300067EDC1 /* SearchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchListViewController.m; sourceTree = "<group>"; };
+		0FD36AC21DB5F8300067EDC1 /* SearchListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchListViewController.xib; sourceTree = "<group>"; };
+		0FD36AC51DB5F9820067EDC1 /* SearchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchListCell.h; sourceTree = "<group>"; };
+		0FD36AC61DB5F9820067EDC1 /* SearchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchListCell.m; sourceTree = "<group>"; };
+		0FD36AC71DB5F9820067EDC1 /* SearchListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchListCell.xib; sourceTree = "<group>"; };
 		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -509,6 +534,12 @@
 		0FD36AAF1DB5BEC90067EDC1 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				0FD36AB11DB5CB240067EDC1 /* SearchViewController.h */,
+				0FD36AB21DB5CB240067EDC1 /* SearchViewController.m */,
+				0FD36AB31DB5CB240067EDC1 /* SearchViewController.xib */,
+				0FD36AC01DB5F82F0067EDC1 /* SearchListViewController.h */,
+				0FD36AC11DB5F8300067EDC1 /* SearchListViewController.m */,
+				0FD36AC21DB5F8300067EDC1 /* SearchListViewController.xib */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -516,6 +547,15 @@
 		0FD36AB01DB5BEC90067EDC1 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				0FD36AB61DB5CD2A0067EDC1 /* SearchVCCell.h */,
+				0FD36AB71DB5CD2A0067EDC1 /* SearchVCCell.m */,
+				0FD36AB81DB5CD2A0067EDC1 /* SearchVCCell.xib */,
+				0FD36ABB1DB5CFC00067EDC1 /* SearchView.xib */,
+				0FD36ABD1DB5CFD60067EDC1 /* SearchView.h */,
+				0FD36ABE1DB5CFD60067EDC1 /* SearchView.m */,
+				0FD36AC51DB5F9820067EDC1 /* SearchListCell.h */,
+				0FD36AC61DB5F9820067EDC1 /* SearchListCell.m */,
+				0FD36AC71DB5F9820067EDC1 /* SearchListCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1223,12 +1263,15 @@
 				0F25435F1D9CE50300ECB2F6 /* MakeMoneyViewController.xib in Resources */,
 				36111AC11D6EE58C00A03BF4 /* Placeholder in Resources */,
 				0F2543671D9CE50300ECB2F6 /* MakeMoneyCell.xib in Resources */,
+				0FD36AC41DB5F8300067EDC1 /* SearchListViewController.xib in Resources */,
 				36111ACE1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AC81D6EE58C00A03BF4 /* Placeholder in Resources */,
 				C87896E61D958A7B00264115 /* RegisterViewController.xib in Resources */,
+				0FD36ABA1DB5CD2A0067EDC1 /* SearchVCCell.xib in Resources */,
 				36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */,
 				36111AE61D6EE67500A03BF4 /* Placeholder in Resources */,
+				0FD36AB51DB5CB240067EDC1 /* SearchViewController.xib in Resources */,
 				0F2543641D9CE50300ECB2F6 /* Placeholder in Resources */,
 				0F4002291D98F1F6004A0A66 /* Placeholder in Resources */,
 				0F64B5D81DB4BC1C00506DD6 /* HomeCollectionViewHeader.xib in Resources */,
@@ -1251,6 +1294,7 @@
 				36111ADF1D6EE63200A03BF4 /* Info.plist in Resources */,
 				364DA64E1D6584F400F6F424 /* MJRefresh.bundle in Resources */,
 				36111AC71D6EE58C00A03BF4 /* Placeholder in Resources */,
+				0FD36ABC1DB5CFC00067EDC1 /* SearchView.xib in Resources */,
 				0F25436A1D9CE50300ECB2F6 /* Placeholder in Resources */,
 				36111ACA1D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111A9C1D6EE4FC00A03BF4 /* Placeholder in Resources */,
@@ -1267,6 +1311,7 @@
 				C87896E11D9577BD00264115 /* LoginViewController.xib in Resources */,
 				36111AC61D6EE58C00A03BF4 /* Placeholder in Resources */,
 				36111ACC1D6EE58C00A03BF4 /* Placeholder in Resources */,
+				0FD36AC91DB5F9820067EDC1 /* SearchListCell.xib in Resources */,
 				0F2543691D9CE50300ECB2F6 /* MakeMoneyHeader.xib in Resources */,
 				36111ADE1D6EE63200A03BF4 /* Assets.xcassets in Resources */,
 			);
@@ -1349,8 +1394,10 @@
 				364DA62A1D6584F400F6F424 /* NetWorkManager.m in Sources */,
 				364DA6291D6584F400F6F424 /* UIView+Extension.m in Sources */,
 				364DA61D1D6584F400F6F424 /* NSObject+YGTool.m in Sources */,
+				0FD36AB91DB5CD2A0067EDC1 /* SearchVCCell.m in Sources */,
 				0F42FC7D1D9A51BE00D20647 /* ChargeHeader.m in Sources */,
 				0F4002361D98F5BD004A0A66 /* MeTableViewController.m in Sources */,
+				0FD36AC81DB5F9820067EDC1 /* SearchListCell.m in Sources */,
 				364DA64D1D6584F400F6F424 /* LYLPageControl.m in Sources */,
 				364DA6521D6584F400F6F424 /* MJRefreshHeaderView.m in Sources */,
 				364DA6511D6584F400F6F424 /* MJRefreshFooterView.m in Sources */,
@@ -1373,6 +1420,8 @@
 				0F42FC771D9A509000D20647 /* ChargeTypeCell.m in Sources */,
 				36111AE01D6EE63200A03BF4 /* main.m in Sources */,
 				364DA6241D6584F400F6F424 /* UIDevice-Hardware.m in Sources */,
+				0FD36ABF1DB5CFD60067EDC1 /* SearchView.m in Sources */,
+				0FD36AB41DB5CB240067EDC1 /* SearchViewController.m in Sources */,
 				364DA6261D6584F400F6F424 /* UIImageView+YGUIImageView.m in Sources */,
 				364DA64B1D6584F400F6F424 /* LYLIMGBrowse.m in Sources */,
 				0F2543681D9CE50300ECB2F6 /* MakeMoneyHeader.m in Sources */,
@@ -1392,6 +1441,7 @@
 				0F64B5D71DB4BC1C00506DD6 /* HomeCollectionViewHeader.m in Sources */,
 				364DA64F1D6584F400F6F424 /* MJRefreshBaseView.m in Sources */,
 				C87896E01D9577BD00264115 /* LoginViewController.m in Sources */,
+				0FD36AC31DB5F8300067EDC1 /* SearchListViewController.m in Sources */,
 				C8A99CE21D969F4D00633A0D /* YSLContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
