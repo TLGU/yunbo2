@@ -42,13 +42,14 @@
     [item setTitleTextAttributes:selectAtts forState:UIControlStateSelected];
 }
     
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
+    
     [super viewDidLoad];
     [self addChildViewControllerWithClassname:[RootViewController description] imagename:@"1--VR专区_03hui" title:@"推荐"];
     [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"11_03" title:@"搜索"];
     [self addChildViewControllerWithClassname:[MakeMoneyViewController description]imagename:@"22_03" title:@"赚钱"];
     [self addChildViewControllerWithClassname:[MeTableViewController description] imagename:@"5_03" title:@"我的"];
-    
     
 }
     
