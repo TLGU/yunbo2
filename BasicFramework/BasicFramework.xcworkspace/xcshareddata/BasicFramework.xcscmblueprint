@@ -1,22 +1,20 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EA9D571556B0A9F7C766F06F8A58EB5C0C188CA6",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C4C842CBBB283A191042D18747656E646DFC751B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "EA9D571556B0A9F7C766F06F8A58EB5C0C188CA6" : 9223372036854775807,
     "617A5B283BEB62A14523C574DE0B2F7C0DA3AD92" : 9223372036854775807,
     "C4C842CBBB283A191042D18747656E646DFC751B" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "776ACF50-F625-448D-8094-6AC644914869",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "EA9D571556B0A9F7C766F06F8A58EB5C0C188CA6" : "BasicFramework\/",
-    "617A5B283BEB62A14523C574DE0B2F7C0DA3AD92" : "..",
-    "C4C842CBBB283A191042D18747656E646DFC751B" : ""
+    "617A5B283BEB62A14523C574DE0B2F7C0DA3AD92" : "",
+    "C4C842CBBB283A191042D18747656E646DFC751B" : "yunbo2\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "BasicFramework",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BasicFramework.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BasicFramework\/BasicFramework.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TLGU\/YunBogit.git",
@@ -27,11 +25,6 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TLGU\/yunbo2.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C4C842CBBB283A191042D18747656E646DFC751B"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TLGU\/BasicFramework.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EA9D571556B0A9F7C766F06F8A58EB5C0C188CA6"
     }
   ]
 }

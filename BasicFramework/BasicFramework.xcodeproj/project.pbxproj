@@ -103,6 +103,7 @@
 		364DA6561D6584F400F6F424 /* MyObjectCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364DA61C1D6584F400F6F424 /* MyObjectCoding.framework */; };
 		364DA6591D65851C00F6F424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DA6581D65851C00F6F424 /* AppDelegate.m */; };
 		3A210722E632CE931B050CFF /* libPods-BasicFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */; };
+		C822A82F1DB5046C00CAF6D2 /* HWAutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C822A82E1DB5046C00CAF6D2 /* HWAutoScrollView.m */; };
 		C87896E01D9577BD00264115 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87896DE1D9577BD00264115 /* LoginViewController.m */; };
 		C87896E11D9577BD00264115 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87896DF1D9577BD00264115 /* LoginViewController.xib */; };
 		C87896E51D958A7B00264115 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87896E31D958A7B00264115 /* RegisterViewController.m */; };
@@ -286,6 +287,9 @@
 		46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2404136FF63979E9EA81231 /* Pods-BasicFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.release.xcconfig"; sourceTree = "<group>"; };
 		BDD62ADF7C767CC104287091 /* Pods-BasicFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasicFramework/Pods-BasicFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		C822A82C1DB5046C00CAF6D2 /* HeaderFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderFiles.h; sourceTree = "<group>"; };
+		C822A82D1DB5046C00CAF6D2 /* HWAutoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWAutoScrollView.h; sourceTree = "<group>"; };
+		C822A82E1DB5046C00CAF6D2 /* HWAutoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWAutoScrollView.m; sourceTree = "<group>"; };
 		C87896DD1D9577BD00264115 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C87896DE1D9577BD00264115 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C87896DF1D9577BD00264115 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -960,6 +964,7 @@
 		364DA6021D6584F400F6F424 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				C822A82B1DB5046C00CAF6D2 /* HWAutoScrollView */,
 				C8A99CDD1D969F4C00633A0D /* YSLContainerViewController */,
 				364DA6031D6584F400F6F424 /* IMGBrowse */,
 				364DA60A1D6584F400F6F424 /* MJRefresh */,
@@ -1019,6 +1024,16 @@
 				46AA6AC588A0F83490E72E29 /* libPods-BasicFramework.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C822A82B1DB5046C00CAF6D2 /* HWAutoScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C822A82C1DB5046C00CAF6D2 /* HeaderFiles.h */,
+				C822A82D1DB5046C00CAF6D2 /* HWAutoScrollView.h */,
+				C822A82E1DB5046C00CAF6D2 /* HWAutoScrollView.m */,
+			);
+			path = HWAutoScrollView;
 			sourceTree = "<group>";
 		};
 		C8A99CDD1D969F4C00633A0D /* YSLContainerViewController */ = {
@@ -1333,6 +1348,7 @@
 				0F25435E1D9CE50300ECB2F6 /* MakeMoneyViewController.m in Sources */,
 				0FD36AAB1DB5B4610067EDC1 /* VRViewController.m in Sources */,
 				0F42FC6D1D9A3CE500D20647 /* ChargeViewController.m in Sources */,
+				C822A82F1DB5046C00CAF6D2 /* HWAutoScrollView.m in Sources */,
 				0F64B5D71DB4BC1C00506DD6 /* HomeCollectionViewHeader.m in Sources */,
 				364DA64F1D6584F400F6F424 /* MJRefreshBaseView.m in Sources */,
 				C87896E01D9577BD00264115 /* LoginViewController.m in Sources */,
