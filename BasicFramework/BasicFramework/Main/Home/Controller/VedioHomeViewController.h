@@ -9,5 +9,5 @@
 #import "BasicMainVC.h"
 
 @interface VedioHomeViewController : BasicMainVC
-
+@property(strong,nonatomic)UICollectionView *collectionView;
 @end

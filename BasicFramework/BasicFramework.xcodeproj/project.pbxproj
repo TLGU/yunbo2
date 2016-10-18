@@ -481,6 +481,45 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		0FD36AAC1DB5BEC90067EDC1 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0FD36AAD1DB5BEC90067EDC1 /* model */,
+				0FD36AAE1DB5BEC90067EDC1 /* service */,
+				0FD36AAF1DB5BEC90067EDC1 /* vc */,
+				0FD36AB01DB5BEC90067EDC1 /* view */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0FD36AAD1DB5BEC90067EDC1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0FD36AAE1DB5BEC90067EDC1 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		0FD36AAF1DB5BEC90067EDC1 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		0FD36AB01DB5BEC90067EDC1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		156971422705F69389BE6F64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -909,6 +948,7 @@
 		364DA59F1D6584F400F6F424 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				0FD36AAC1DB5BEC90067EDC1 /* Search */,
 				0F2543471D9CE50300ECB2F6 /* MakeMoney */,
 				0F40021E1D98F1F6004A0A66 /* Me */,
 				364DA5A01D6584F400F6F424 /* AppDelegate(入口) */,

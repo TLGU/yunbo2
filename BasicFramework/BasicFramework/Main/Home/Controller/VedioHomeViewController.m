@@ -14,7 +14,7 @@
 #define collectionViewHeaderHeight itemHeight*2.0f-40
 @interface VedioHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
-@property(strong,nonatomic)UICollectionView *collectionView;
+
 @end
 
 @implementation VedioHomeViewController
@@ -51,9 +51,11 @@ static NSString *HomeCollectionViewHeaderID=@"HomeCollectionViewHeaderID";
 #pragma mark--lify cycle
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
-
+    
     [self.view addSubview:self.collectionView];
+    
     
 }
 
