@@ -38,6 +38,7 @@
     [super awakeFromNib];
     
     [self.leftView setCornerRad:20];
+    
     [self.rightView setCornerRad:20];
     
     [self createControlByRemoteImage];
