@@ -44,6 +44,9 @@
 		0F64B5D71DB4BC1C00506DD6 /* HomeCollectionViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F64B5D51DB4BC1C00506DD6 /* HomeCollectionViewHeader.m */; };
 		0F64B5D81DB4BC1C00506DD6 /* HomeCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F64B5D61DB4BC1C00506DD6 /* HomeCollectionViewHeader.xib */; };
 		0F660D9C1DB1C26700C87FCD /* FileCutUperAndSpliter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F660D9B1DB1C26700C87FCD /* FileCutUperAndSpliter.m */; };
+		0FD36AA71DB5B4490067EDC1 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD36AA51DB5B4490067EDC1 /* CommentViewController.m */; };
+		0FD36AA81DB5B4490067EDC1 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD36AA61DB5B4490067EDC1 /* CommentViewController.xib */; };
+		0FD36AAB1DB5B4610067EDC1 /* VRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD36AAA1DB5B4610067EDC1 /* VRViewController.m */; };
 		36111A991D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A921D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9A1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A941D6EE4FC00A03BF4 /* Placeholder */; };
 		36111A9B1D6EE4FC00A03BF4 /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 36111A961D6EE4FC00A03BF4 /* Placeholder */; };
@@ -182,6 +185,11 @@
 		0F64B5D61DB4BC1C00506DD6 /* HomeCollectionViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewHeader.xib; sourceTree = "<group>"; };
 		0F660D9A1DB1C26700C87FCD /* FileCutUperAndSpliter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCutUperAndSpliter.h; sourceTree = "<group>"; };
 		0F660D9B1DB1C26700C87FCD /* FileCutUperAndSpliter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCutUperAndSpliter.m; sourceTree = "<group>"; };
+		0FD36AA41DB5B4490067EDC1 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		0FD36AA51DB5B4490067EDC1 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		0FD36AA61DB5B4490067EDC1 /* CommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
+		0FD36AA91DB5B4610067EDC1 /* VRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRViewController.h; sourceTree = "<group>"; };
+		0FD36AAA1DB5B4610067EDC1 /* VRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRViewController.m; sourceTree = "<group>"; };
 		36111A921D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A941D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
 		36111A961D6EE4FC00A03BF4 /* Placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
@@ -1030,6 +1038,9 @@
 				0F64B5CA1DB4B35C00506DD6 /* VedioHomeViewController.h */,
 				0F64B5CB1DB4B35D00506DD6 /* VedioHomeViewController.m */,
 				0F64B5CC1DB4B35D00506DD6 /* VedioHomeViewController.xib */,
+				0FD36AA41DB5B4490067EDC1 /* CommentViewController.h */,
+				0FD36AA51DB5B4490067EDC1 /* CommentViewController.m */,
+				0FD36AA61DB5B4490067EDC1 /* CommentViewController.xib */,
 			);
 			name = "影视";
 			sourceTree = "<group>";
@@ -1037,6 +1048,8 @@
 		C8A99CE51D969FDB00633A0D /* VR */ = {
 			isa = PBXGroup;
 			children = (
+				0FD36AA91DB5B4610067EDC1 /* VRViewController.h */,
+				0FD36AAA1DB5B4610067EDC1 /* VRViewController.m */,
 			);
 			name = VR;
 			sourceTree = "<group>";
@@ -1149,6 +1162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD36AA81DB5B4490067EDC1 /* CommentViewController.xib in Resources */,
 				36111AE31D6EE63700A03BF4 /* LaunchScreen.storyboard in Resources */,
 				0F2543601D9CE50300ECB2F6 /* Placeholder in Resources */,
 				0F25435F1D9CE50300ECB2F6 /* MakeMoneyViewController.xib in Resources */,
@@ -1296,6 +1310,7 @@
 				C8A99CD61D9655DE00633A0D /* NHCustomNoNetworkEmptyView.m in Sources */,
 				364DA6281D6584F400F6F424 /* UIScrollView+UITouch.m in Sources */,
 				364DA6551D6584F400F6F424 /* UIView+MJExtension.m in Sources */,
+				0FD36AA71DB5B4490067EDC1 /* CommentViewController.m in Sources */,
 				0F660D9C1DB1C26700C87FCD /* FileCutUperAndSpliter.m in Sources */,
 				364DA6331D6584F400F6F424 /* RootViewController.m in Sources */,
 				364DA6211D6584F400F6F424 /* UIBarButtonItem+DFYGExtension.m in Sources */,
@@ -1316,6 +1331,7 @@
 				364DA62C1D6584F400F6F424 /* DFYGProgressHUD.m in Sources */,
 				364DA6311D6584F400F6F424 /* BasicMainVC.m in Sources */,
 				0F25435E1D9CE50300ECB2F6 /* MakeMoneyViewController.m in Sources */,
+				0FD36AAB1DB5B4610067EDC1 /* VRViewController.m in Sources */,
 				0F42FC6D1D9A3CE500D20647 /* ChargeViewController.m in Sources */,
 				0F64B5D71DB4BC1C00506DD6 /* HomeCollectionViewHeader.m in Sources */,
 				364DA64F1D6584F400F6F424 /* MJRefreshBaseView.m in Sources */,

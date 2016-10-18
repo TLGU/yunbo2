@@ -8,18 +8,21 @@
 
 #import "RootViewController.h"
 #import "YSLContainerViewController.h"
-#import "VedioHomeViewController.h"
+//#import "VedioHomeViewController.h"
+#import "CommentViewController.h"
+#import "VRViewController.h"
 @interface RootViewController ()<YSLContainerViewControllerDelegate>
     
     @end
 
 @implementation RootViewController
     
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    VedioHomeViewController *vc1=[VedioHomeViewController new];vc1.title=@"影视";
-    UIViewController *vc2=[UIViewController new];vc2.title=@"VR";
+    CommentViewController *vc1=[CommentViewController new];vc1.title=@"影视";
+    VRViewController *vc2=[VRViewController new];vc2.title=@"VR";
     YSLContainerViewController *containerVC = [[YSLContainerViewController alloc]initWithControllers:@[vc1,vc2]
                                                                                         topBarHeight:20
                                                                                 parentViewController:self];
