@@ -6,10 +6,13 @@
 //  Copyright © 2016年 Rainy. All rights reserved.
 //
 #define adViewHeight ((kScreenHeight-49)/2.0f)-130)
+
 #define pageControlCenx kScreenWidth/2.0f
 
 #import "HomeCollectionViewHeader.h"
+
 #import "HWAutoScrollView.h"
+
 @interface HomeCollectionViewHeader ()
 
 @property (weak, nonatomic) IBOutlet UIView *leftView;
@@ -17,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *rightView;
 
 @property(strong,nonatomic)UITextField *textField;
+
 @property (strong, nonatomic) IBOutlet UIView *adView;
 
 @end
