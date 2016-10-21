@@ -66,6 +66,8 @@
 		0F64B5D71DB4BC1C00506DD6 /* HomeCollectionViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F64B5D51DB4BC1C00506DD6 /* HomeCollectionViewHeader.m */; };
 		0F64B5D81DB4BC1C00506DD6 /* HomeCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F64B5D61DB4BC1C00506DD6 /* HomeCollectionViewHeader.xib */; };
 		0F660D9C1DB1C26700C87FCD /* FileCutUperAndSpliter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F660D9B1DB1C26700C87FCD /* FileCutUperAndSpliter.m */; };
+		0F6C41031DBA143D00DA916F /* libUMessage_Sdk_1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6C41011DBA143D00DA916F /* libUMessage_Sdk_1.4.0.a */; };
+		0F6C41051DBA150900DA916F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6C41041DBA150900DA916F /* UserNotifications.framework */; };
 		0FC33BCB1DB8B3B600509C79 /* AccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC33BCA1DB8B3B600509C79 /* AccountService.m */; };
 		0FC33BCE1DB8B8B900509C79 /* MD5Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC33BCD1DB8B8B900509C79 /* MD5Encryption.m */; };
 		0FC33BDA1DB8C00600509C79 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC33BD11DB8C00600509C79 /* SVIndefiniteAnimatedView.m */; };
@@ -268,6 +270,9 @@
 		0F64B5D61DB4BC1C00506DD6 /* HomeCollectionViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewHeader.xib; sourceTree = "<group>"; };
 		0F660D9A1DB1C26700C87FCD /* FileCutUperAndSpliter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCutUperAndSpliter.h; sourceTree = "<group>"; };
 		0F660D9B1DB1C26700C87FCD /* FileCutUperAndSpliter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCutUperAndSpliter.m; sourceTree = "<group>"; };
+		0F6C41011DBA143D00DA916F /* libUMessage_Sdk_1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.4.0.a; sourceTree = "<group>"; };
+		0F6C41021DBA143D00DA916F /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
+		0F6C41041DBA150900DA916F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		0FC33BC91DB8B3B600509C79 /* AccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountService.h; sourceTree = "<group>"; };
 		0FC33BCA1DB8B3B600509C79 /* AccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountService.m; sourceTree = "<group>"; };
 		0FC33BCC1DB8B8B900509C79 /* MD5Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Encryption.h; sourceTree = "<group>"; };
@@ -427,6 +432,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6C41051DBA150900DA916F /* UserNotifications.framework in Frameworks */,
 				0F1806E31DB8697200CBE63B /* libz.tbd in Frameworks */,
 				0F1806DB1DB867EE00CBE63B /* libc++.tbd in Frameworks */,
 				0F1806E11DB8695900CBE63B /* libsqlite3.tbd in Frameworks */,
@@ -435,6 +441,7 @@
 				0F1806C91DB8652300CBE63B /* libSocialQQ.a in Frameworks */,
 				0F1806CD1DB8652300CBE63B /* libWeiboSDK.a in Frameworks */,
 				0F1806D41DB8652300CBE63B /* UMSocialNetwork.framework in Frameworks */,
+				0F6C41031DBA143D00DA916F /* libUMessage_Sdk_1.4.0.a in Frameworks */,
 				0F1806D01DB8652300CBE63B /* libWeChatSDK.a in Frameworks */,
 				0F1806CA1DB8652300CBE63B /* TencentOpenAPI.framework in Frameworks */,
 				0F1806CF1DB8652300CBE63B /* libSocialWeChat.a in Frameworks */,
@@ -704,6 +711,15 @@
 				0F660D9B1DB1C26700C87FCD /* FileCutUperAndSpliter.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		0F6C41001DBA143D00DA916F /* UMessage_Sdk_1.4.0 */ = {
+			isa = PBXGroup;
+			children = (
+				0F6C41011DBA143D00DA916F /* libUMessage_Sdk_1.4.0.a */,
+				0F6C41021DBA143D00DA916F /* UMessage.h */,
+			);
+			path = UMessage_Sdk_1.4.0;
 			sourceTree = "<group>";
 		};
 		0FC33BCF1DB8C00600509C79 /* SVProgressHUD */ = {
@@ -1265,6 +1281,7 @@
 		364DA6021D6584F400F6F424 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				0F6C41001DBA143D00DA916F /* UMessage_Sdk_1.4.0 */,
 				0FC33BCF1DB8C00600509C79 /* SVProgressHUD */,
 				0F18069B1DB8652300CBE63B /* UMSocial */,
 				C822A82B1DB5046C00CAF6D2 /* HWAutoScrollView */,
@@ -1324,6 +1341,7 @@
 		75B59DDB8BB424BDD251E7E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F6C41041DBA150900DA916F /* UserNotifications.framework */,
 				0F1806E21DB8697200CBE63B /* libz.tbd */,
 				0F1806E01DB8695900CBE63B /* libsqlite3.tbd */,
 				0F1806DE1DB8694D00CBE63B /* CoreTelephony.framework */,
@@ -1824,7 +1842,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: lei li (SXMCVCSXCS)";
 				DEVELOPMENT_TEAM = 4VWYUWEQJU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1842,11 +1860,12 @@
 					"$(PROJECT_DIR)/BasicFramework/Vender/UMSocial/SocialLibraries/QQ",
 					"$(PROJECT_DIR)/BasicFramework/Vender/UMSocial/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/BasicFramework/Vender/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/BasicFramework/Vender/UMessage_Sdk_1.4.0",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tongfu.yunbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ac64b79-787a-4150-a755-398619ad8638";
-				PROVISIONING_PROFILE_SPECIFIER = dev_yunbo_profile;
+				PROVISIONING_PROFILE = "fbd71e8b-9362-4bbc-ab9d-0982b1d3fe10";
+				PROVISIONING_PROFILE_SPECIFIER = dev_yunbo_profile2;
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1858,7 +1877,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: lei li (SXMCVCSXCS)";
 				DEVELOPMENT_TEAM = 4VWYUWEQJU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1876,11 +1895,12 @@
 					"$(PROJECT_DIR)/BasicFramework/Vender/UMSocial/SocialLibraries/QQ",
 					"$(PROJECT_DIR)/BasicFramework/Vender/UMSocial/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/BasicFramework/Vender/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/BasicFramework/Vender/UMessage_Sdk_1.4.0",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tongfu.yunbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ac64b79-787a-4150-a755-398619ad8638";
-				PROVISIONING_PROFILE_SPECIFIER = dev_yunbo_profile;
+				PROVISIONING_PROFILE = "fbd71e8b-9362-4bbc-ab9d-0982b1d3fe10";
+				PROVISIONING_PROFILE_SPECIFIER = dev_yunbo_profile2;
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
