@@ -36,4 +36,14 @@
                   target:(UIViewController *)targetVC
                   sucess:(void (^)(id value))sucessBlock
                  failure:(void (^)(id value))failureBlock;
+
+
+
+
++(void)loginWithUserName:(NSString *)userName
+                password:(NSString*)pwd
+                  target:(UIViewController *)targetVC
+                  sucess:(void (^)(id value))sucessBlock
+                 failure:(void (^)(id value))failureBlock;
+
 @end

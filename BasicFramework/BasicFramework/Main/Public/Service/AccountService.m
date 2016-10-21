@@ -7,7 +7,7 @@
 //
 
 #import "AccountService.h"
-
+#import "MD5Encryption.h"
 @implementation AccountService
 //获取手机验证码
 +(void)getPhoneRanCodeWithPhone:(NSString *)phone
@@ -161,6 +161,84 @@
     
 }
 
+//普通手机登录
++(void)loginWithUserName:(NSString *)userName
+                password:(NSString*)pwd
+                  target:(UIViewController *)targetVC
+                  sucess:(void (^)(id value))sucessBlock
+                 failure:(void (^)(id value))failureBlock
+{
+    
+    
+    NSMutableDictionary *params=[NSMutableDictionary dictionary];
+    
+    params[@"username"]=userName;
+    
+    NSString *randCode=  [self ret32bitString];
+    
+    params[@"userpwd"]=[self getParamPwdWithPassword:pwd randCode:randCode];
+    
+   
+    params[@"randCode"]=randCode;
+    
+    [SVProgressHUD show];
+    
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"front/login_simple.do"
+                                                    parameters:params
+                                                    Controller:targetVC
+                                                       success:^(id responseObject)
+     {
+         
+         NSString * message=  [responseObject objectForKey:@"message"];
+         
+         [SVProgressHUD showSuccessWithStatus:message];
+         
+         NSString *key= [responseObject objectForKey:@"key"];
+         
+         
+         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_name_key];
+         
+         [[NSUserDefaults standardUserDefaults] synchronize];
+         
+         if (sucessBlock)
+         {
+             sucessBlock(responseObject);
+             
+         }
+         
+     } failure:^(NSError *error)
+     {
+         
+         if (failureBlock)
+         {
+             failureBlock(error);
+         }
+     }];
+}
 
++(NSString *)ret32bitString
+
+{
+    
+    char data[32];
+    
+    for (int x=0;x<32;data[x++] = (char)('A' + (arc4random_uniform(26))));
+    
+    return [[NSString alloc] initWithBytes:data length:32 encoding:NSUTF8StringEncoding];
+    
+}
+
++(NSString *)getParamPwdWithPassword:(NSString *)password randCode:(NSString *)randCode
+{
+    
+    NSString * md5Final = [MD5Encryption md5by32:password];
+    
+    NSString *code=  [NSString stringWithFormat:@"%@%@",md5Final,randCode.lowercaseString];
+    
+    NSString *userpwd= [MD5Encryption md5by32:code];
+    
+    
+    return userpwd;
+}
 
 @end

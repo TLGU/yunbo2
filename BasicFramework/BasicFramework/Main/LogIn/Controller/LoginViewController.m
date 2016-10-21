@@ -43,6 +43,20 @@
 
 - (IBAction)loginAction:(id)sender {
     
+    if (self.phoneTextField.text.length<11) {
+        [SVProgressHUD showErrorWithStatus:@"请核实您的手机的有效性"];
+        return;
+    }
+    if (self.pwdTextField.text.length<6) {
+        [SVProgressHUD showErrorWithStatus:@"密码必须为6-16位的字母或数字的组合"];
+        return;
+    }
+    
+    [AccountService loginWithUserName:self.phoneTextField.text password:self.pwdTextField.text target:self sucess:^(id value) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } failure:nil];
+    
+    
 }
 
 - (IBAction)wxLoginAction:(id)sender
