@@ -202,6 +202,7 @@
     
     //设置友盟appkey
 //    [[UMSocialManager defaultManager] setUmSocialAppkey:@"57b432afe0f55a9832001a0a"];
+    
     [[UMSocialManager defaultManager] setUmSocialAppkey:@"580861b5e0f55a431a003b5a"];
     
     

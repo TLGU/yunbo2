@@ -45,11 +45,13 @@
     
 }
 
-- (IBAction)wxLoginAction:(id)sender {
+- (IBAction)wxLoginAction:(id)sender
+{
      [self authWithPlatform:UMSocialPlatformType_WechatSession];
 }
     
-- (IBAction)qqLoginAction:(id)sender {
+- (IBAction)qqLoginAction:(id)sender
+{
     [self authWithPlatform:UMSocialPlatformType_QQ];
 }
     
