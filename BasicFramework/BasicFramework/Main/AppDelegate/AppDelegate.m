@@ -13,103 +13,73 @@
 #import "LoginViewController.h"
 #import "BasicMainTBC.h"
 #import <AVFoundation/AVFoundation.h>//测试代码
+#import <UMSocialCore/UMSocialCore.h>
+#import "WXApi.h"
+//#import "WXApiManager.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-// 混合音乐
-- (void)merge{
-    // mbp提示框
-   // [MBProgressHUD showMessage:@"正在处理中"];
-    
-    // 路径
-    NSString *documents = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    // 声音来源
-    NSURL *audioInputUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"五环之歌" ofType:@"mp3"]];
-    // 视频来源
-    NSURL *videoInputUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"myPlayer" ofType:@"mp4"]];
-    
-    // 最终合成输出路径
-    NSString *outPutFilePath = [documents stringByAppendingPathComponent:@"merge.mp4"];
-    // 添加合成路径
-    NSURL *outputFileUrl = [NSURL fileURLWithPath:outPutFilePath];
-    // 时间起点
-    CMTime nextClistartTime = kCMTimeZero;
-    // 创建可变的音视频组合
-    AVMutableComposition *comosition = [AVMutableComposition composition];
+-(BOOL)backBlockWithUrl:(NSURL *)url{
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+    NSLog(@"%@",url.absoluteString);
+    //如果极简开发包不可用，会跳转支付宝钱包进行支付，需要将支付宝钱包的支付结果回传给开发包
+    if ([url.host isEqualToString:@"safepay"]) {
+//        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+//            //【由于在跳转支付宝客户端支付的过程中，商户app在后台很可能被系统kill了，所以pay接口的callback就会失效，请商户对standbyCallback返回的回调结果进行处理,就是在这个方法里面处理跟callback一样的逻辑】
+//            NSLog(@"result = %@",resultDic);
+//        }];
+    }
+    if ([url.host isEqualToString:@"platformapi"]){//支付宝钱包快登授权返回authCode
+        
+//        [[AlipaySDK defaultService] processAuthResult:url standbyCallback:^(NSDictionary *resultDic) {
+//            //【由于在跳转支付宝客户端支付的过程中，商户app在后台很可能被系统kill了，所以pay接口的callback就会失效，请商户对standbyCallback返回的回调结果进行处理,就是在这个方法里面处理跟callback一样的逻辑】
+//            NSLog(@"result = %@",resultDic);
+//        }];
+    }
     
     
-    // 视频采集
-    AVURLAsset *videoAsset = [[AVURLAsset alloc] initWithURL:videoInputUrl options:nil];
-    // 视频时间范围
-    CMTimeRange videoTimeRange = CMTimeRangeMake(kCMTimeZero, videoAsset.duration);
-    // 视频通道 枚举 kCMPersistentTrackID_Invalid = 0
-    AVMutableCompositionTrack *videoTrack = [comosition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
-    // 视频采集通道
-    AVAssetTrack *videoAssetTrack = [[videoAsset tracksWithMediaType:AVMediaTypeVideo] firstObject];
-    //  把采集轨道数据加入到可变轨道之中
-    [videoTrack insertTimeRange:videoTimeRange ofTrack:videoAssetTrack atTime:nextClistartTime error:nil];
+    if (!result) {
+        // 其他如支付宝支付等SDK的回调
+        //        [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+    }
+    else
+    {
+//        [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+    }
     
+    return result;
+}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return   [self backBlockWithUrl:url];
     
-    
-    // 声音采集
-    AVURLAsset *audioAsset = [[AVURLAsset alloc] initWithURL:audioInputUrl options:nil];
-    // 因为视频短这里就直接用视频长度了,如果自动化需要自己写判断
-    CMTimeRange audioTimeRange = videoTimeRange;
-    // 音频通道
-    AVMutableCompositionTrack *audioTrack = [comosition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
-    // 音频采集通道
-    AVAssetTrack *audioAssetTrack = [[audioAsset tracksWithMediaType:AVMediaTypeAudio] firstObject];
-    // 加入合成轨道之中
-    [audioTrack insertTimeRange:audioTimeRange ofTrack:audioAssetTrack atTime:nextClistartTime error:nil];
-    
-    // 创建一个输出
-    AVAssetExportSession *assetExport = [[AVAssetExportSession alloc] initWithAsset:comosition presetName:AVAssetExportPresetMediumQuality];
-    // 输出类型
-    assetExport.outputFileType = AVFileTypeQuickTimeMovie;
-    // 输出地址
-    assetExport.outputURL = outputFileUrl;
-    // 优化
-    assetExport.shouldOptimizeForNetworkUse = YES;
-    // 合成完毕
-    [assetExport exportAsynchronouslyWithCompletionHandler:^{
-        // 回到主线程
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // 调用播放方法
-            [self playWithUrl:outputFileUrl];
-        });
-    }];
 }
 
-/** 播放方法 */
-- (void)playWithUrl:(NSURL *)url{
-    // 传入地址
-    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:url];
-    // 播放器
-    AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
-    // 播放器layer
-    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
-   // playerLayer.frame = self.imageView.frame;
-    // 视频填充模式
-    playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
-    // 添加到imageview的layer上
-   // [self.imageView.layer addSublayer:playerLayer];
-    // 隐藏提示框 开始播放
-   // [MBProgressHUD hideHUD];
-   // [MBProgressHUD showSuccess:@"合成完成"];
-    // 播放
-    [player play];
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    return   [self backBlockWithUrl:url];
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return   [self backBlockWithUrl:url];
+}
+
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     
-#pragma mark 网络监控打开 当前网络状态，取 kNetworkType 值。
+    #pragma mark 网络监控打开 当前网络状态，取 kNetworkType 值。
+    
+    
+    [self configUmeng];
+    
     [[AppSingle Shared]  setReachability];
     
     [self setMyWindowAndRootViewController];
-    
     
     
     [self.window makeKeyAndVisible];
@@ -128,27 +98,33 @@
     self.window.rootViewController =tbc;
 }
 
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+-(void)configUmeng{
+    //打开调试日志
+    [[UMSocialManager defaultManager] openLog:YES];
+    
+    //设置友盟appkey
+//    [[UMSocialManager defaultManager] setUmSocialAppkey:@"57b432afe0f55a9832001a0a"];
+    [[UMSocialManager defaultManager] setUmSocialAppkey:@"580861b5e0f55a431a003b5a"];
+    
+    
+    // 获取友盟social版本号
+    //NSLog(@"UMeng social version: %@", [UMSocialGlobal umSocialSDKVersion]);
+    
+    //设置微信的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WEIXIN_APPID appSecret:WEIXIN_APPKEY redirectURL:@"http://mobile.umeng.com/social"];
+    
+    
+    //设置分享到QQ互联的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:QQ_APPID  appSecret:QQ_APPKEY redirectURL:@"http://mobile.umeng.com/social"];
+    
+    //设置新浪的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"3921700954"  appSecret:@"04b48b094faeb16683c32669824ebdad" redirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+    
+    
+    
+    // 如果不想显示平台下的某些类型，可用以下接口设置
+    [[UMSocialManager defaultManager] removePlatformProviderWithPlatformTypes:@[@(UMSocialPlatformType_WechatFavorite)]];
+    
+    
 }
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
 @end

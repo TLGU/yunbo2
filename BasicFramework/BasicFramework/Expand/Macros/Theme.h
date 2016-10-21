@@ -98,6 +98,8 @@
  */
 #define kButtonCornerRad 5
 
+///
+#define base_control_color kRGB(54, 149, 249)
 
 //十六进制颜色
 #define UIColorFromRGBValue(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]

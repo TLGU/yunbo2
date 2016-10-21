@@ -16,7 +16,7 @@
  *  @param 开发环境
  *
  */
-#define YGBaseURL @"http://"
+#define YGBaseURL @"http://183.86.218.83:8080/"
 
 #elif ENVIRONMENT ==1
 
