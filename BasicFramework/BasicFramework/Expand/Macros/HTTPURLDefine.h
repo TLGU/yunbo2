@@ -47,9 +47,16 @@
 
 #pragma mark -  * * * * * * * * * * * * * * User URL * * * * * * * * * * * * * *
 
-
-
-
+//验证码
+#define URL_For_RandCode @"rand/getPhoneRand.do"
+//登录
+#define URL_For_Login @"front/login_simple.do"
+//三方登录
+#define URL_For_Third_Login @"front/register_third_user.do"
+//注册
+#define URL_For_Register @"front/register.do"
+//找回密码
+#define URL_For_FindPwd  @"front/resetPassword.do"
 
 
 

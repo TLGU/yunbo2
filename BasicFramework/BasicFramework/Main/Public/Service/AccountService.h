@@ -46,4 +46,13 @@
                   sucess:(void (^)(id value))sucessBlock
                  failure:(void (^)(id value))failureBlock;
 
+
+//重置密码
++(void)resetPwdWithPhone:(NSString *)phone
+                randCode:(NSString *)randCode
+                 userPwd:(NSString *)userPwd
+              userPwd_ok:(NSString *)userPwd_ok
+                  target:(UIViewController *)targetVC
+                  sucess:(void (^)(id value))sucessBlock
+                 failure:(void (^)(id value))failureBlock;
 @end

@@ -25,7 +25,7 @@
     
     dic[@"phone"]=phone;
     [SVProgressHUD show];
-    [[NetWorkManager sharedInstance] requestDataForGETWithURL:@"rand/getPhoneRand.do"
+    [[NetWorkManager sharedInstance] requestDataForGETWithURL:URL_For_RandCode
                                                    parameters:dic
                                                    Controller:targetVC
                                                       success:^(id responseObject)
@@ -74,8 +74,9 @@
     params[@"randCode"]=randCode;
     params[@"userpwd"]=userPwd;
     params[@"userpwd_ok"]=userPwd_ok;
+    
     [SVProgressHUD show];
-    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"front/register.do"
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:URL_For_Register
                                                     parameters:params
                                                     Controller:targetVC
                                                        success:^(id responseObject)
@@ -127,7 +128,7 @@
     params[@"third_user_id"]=third_user_id;
     params[@"third_user_type"]=third_user_type;
     [SVProgressHUD show];
-    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"front/register_third_user.do"
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:URL_For_Third_Login
                                                     parameters:params
                                                     Controller:targetVC
                                                        success:^(id responseObject)
@@ -183,7 +184,7 @@
     
     [SVProgressHUD show];
     
-    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:@"front/login_simple.do"
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:URL_For_Login
                                                     parameters:params
                                                     Controller:targetVC
                                                        success:^(id responseObject)
@@ -215,7 +216,59 @@
          }
      }];
 }
+//重置密码
++(void)resetPwdWithPhone:(NSString *)phone
+                randCode:(NSString *)randCode
+                 userPwd:(NSString *)userPwd
+              userPwd_ok:(NSString *)userPwd_ok
+                  target:(UIViewController *)targetVC
+                  sucess:(void (^)(id value))sucessBlock
+                 failure:(void (^)(id value))failureBlock{
 
+    if (!phone.length||!randCode.length||!userPwd.length||!userPwd_ok.length)
+    {
+        [SVProgressHUD showErrorWithStatus:@"参数不完整"];
+        return;
+    }
+    NSMutableDictionary *params=[NSMutableDictionary dictionary];
+    params[@"username"]=phone;
+    params[@"randCode"]=randCode;
+    params[@"userpwd"]=userPwd;
+    params[@"userpwd_ok"]=userPwd_ok;
+    
+    [SVProgressHUD show];
+    [[NetWorkManager sharedInstance] requestDataForPOSTWithURL:URL_For_FindPwd
+                                                    parameters:params
+                                                    Controller:targetVC
+                                                       success:^(id responseObject)
+     {
+         
+         [SVProgressHUD showSuccessWithStatus:@"重置成功."];
+         
+         NSString *key= [responseObject objectForKey:@"key"];
+         
+         
+         [[NSUserDefaults standardUserDefaults] setObject:key forKey:user_name_key];
+         
+         [[NSUserDefaults standardUserDefaults] synchronize];
+         
+         if (sucessBlock)
+         {
+             sucessBlock(responseObject);
+             
+         }
+         
+     } failure:^(NSError *error)
+     {
+         
+         if (failureBlock)
+         {
+             failureBlock(error);
+         }
+     }];
+    
+    
+}
 +(NSString *)ret32bitString
 
 {

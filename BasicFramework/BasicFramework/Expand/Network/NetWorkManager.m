@@ -142,12 +142,37 @@ static NetWorkManager *network = nil;
     
     [self requestWithMethod:RequestMethodGet Url:URL parameters:parameters Controller:Controller success:success failure:failure];
 }
+//不需要登录的接口
+-(BOOL)isNotLoginUrl:(NSString *)urlStr{
+    if ([urlStr isEqualToString:URL_For_RandCode]) {
+        return YES;
+    }
+    if ([urlStr isEqualToString:URL_For_Login]) {
+        return YES;
+    }
+    if ([urlStr isEqualToString:URL_For_Third_Login]) {
+        return YES;
+    }
+    if ([urlStr isEqualToString:URL_For_Register]) {
+        return YES;
+    }
+    if ([urlStr isEqualToString:URL_For_FindPwd]) {
+        return YES;
+    }
+    return NO;
+}
 
 -(void)requestWithMethod:(RequestMethod)method Url:(NSString*)URL parameters:(id)parameters Controller:(UIViewController *)Controller success:(void(^)(id responseObject))success failure:(void (^)(NSError *  error))failure
 {
     AFHTTPSessionManager *manager = [self HTTPSessionManager];
+   
+    if (![self isNotLoginUrl:URL]) {
+        parameters=  [self constructParams:parameters];
+    }
+   
+    
     URL = [NSString stringWithFormat:@"%@%@",YGBaseURL,URL];
-    parameters=  [self constructParams:parameters];
+    
     
     if (method==RequestMethodGet)
     {
@@ -346,6 +371,8 @@ static UIViewController *tempVC = nil;
     if (!name||!name.length) {
         return sender;
     }
+    
+    
     NSMutableDictionary *dict=[NSMutableDictionary dictionary];
     NSString *usernme= [[NSUserDefaults standardUserDefaults] objectForKey:user_name_key];
     if (!usernme) {
