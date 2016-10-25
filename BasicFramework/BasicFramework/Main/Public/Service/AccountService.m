@@ -11,6 +11,7 @@
 @implementation AccountService
 //获取手机验证码
 +(void)getPhoneRanCodeWithPhone:(NSString *)phone
+                         isUser:(BOOL)bo
                          target:(UIViewController *)targetVC
                          sucess:(void (^)(id value))sucessBlock
                         failure:(void (^)(id value))failureBlock
@@ -24,8 +25,17 @@
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     
     dic[@"phone"]=phone;
+    NSString *urlStr=@"";
+    if (bo) {
+        urlStr=URL_For_UserRandCode;
+        dic[@"username"]=phone;
+        [dic removeObjectForKey:@"phone"];
+    }else{
+        urlStr=URL_For_RandCode;
+        
+    }
     [SVProgressHUD show];
-    [[NetWorkManager sharedInstance] requestDataForGETWithURL:URL_For_RandCode
+    [[NetWorkManager sharedInstance] requestDataForGETWithURL:urlStr
                                                    parameters:dic
                                                    Controller:targetVC
                                                       success:^(id responseObject)
@@ -42,7 +52,7 @@
          }
      } failure:^(NSError *error)
      {
-         [SVProgressHUD dismiss];
+//         [SVProgressHUD dismiss];
          if (failureBlock)
          {
              failureBlock(error);
@@ -230,6 +240,7 @@
         [SVProgressHUD showErrorWithStatus:@"参数不完整"];
         return;
     }
+    
     NSMutableDictionary *params=[NSMutableDictionary dictionary];
     params[@"username"]=phone;
     params[@"randCode"]=randCode;

@@ -159,6 +159,9 @@ static NetWorkManager *network = nil;
     if ([urlStr isEqualToString:URL_For_FindPwd]) {
         return YES;
     }
+    if ([urlStr isEqualToString:URL_For_UserRandCode]) {
+        return YES;
+    }
     return NO;
 }
 

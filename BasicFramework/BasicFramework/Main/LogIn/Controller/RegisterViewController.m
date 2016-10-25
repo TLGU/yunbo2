@@ -40,12 +40,15 @@
         return;
     }
     
-    [AccountService getPhoneRanCodeWithPhone:self.phoneTextField.text target:self sucess:^(id value) {
+    [AccountService getPhoneRanCodeWithPhone:self.phoneTextField.text isUser:NO target:self sucess:^(id value) {
         [self countDownWithButton:sender];
         [SVProgressHUD showSuccessWithStatus:value];
     } failure:^(id value) {
         
     }];
+    
+    
+    
     
     
 }

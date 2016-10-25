@@ -12,6 +12,7 @@
 
 //获取手机验证码
 +(void)getPhoneRanCodeWithPhone:(NSString *)phone
+                         isUser:(BOOL)bo
                          target:(UIViewController *)targetVC
                          sucess:(void (^)(id value))sucessBlock
                         failure:(void (^)(id value))failureBlock;

@@ -32,6 +32,7 @@
         return;
     }
     [AccountService getPhoneRanCodeWithPhone:self.phoneTextField.text
+                                        isUser:YES
                                       target:self sucess:^(id value) {
                                           
                                           [SVProgressHUD  showSuccessWithStatus:value];
@@ -56,7 +57,8 @@
         [SVProgressHUD showErrorWithStatus:@"密码必须为6-16位的字母或数字的组合"];
         return;
     }
-    if (![self.pwd_okTextField.text isEqualToString:self.pwdTextField.text]) {
+    if (![self.pwd_okTextField.text isEqualToString:self.pwdTextField.text])
+    {
         [SVProgressHUD showErrorWithStatus:@"两次密码输入不一致!"];
         return;
     }
@@ -68,7 +70,7 @@
                                target:self sucess:^(id value)
     {
                                    
-        [SVProgressHUD showSuccessWithStatus:value];
+//        [SVProgressHUD showSuccessWithStatus:value];
         
         [self dismissViewControllerAnimated:YES completion:nil];
         
