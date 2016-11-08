@@ -22,6 +22,7 @@
     self.collectionView.contentInset=UIEdgeInsetsMake(0, 0, 49+64, 0);
     
     self.collectionView.scrollIndicatorInsets=self.collectionView.contentInset;
+    
 }
 
 

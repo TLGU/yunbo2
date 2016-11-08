@@ -12,6 +12,7 @@
 #import "BasicMainNC.h"
 #import "MeTableViewController.h"
 #import "MakeMoneyViewController.h"
+#import "SearchViewController.h"
 @interface BasicMainTBC ()
 
 @end
@@ -47,7 +48,7 @@
     
     [super viewDidLoad];
     [self addChildViewControllerWithClassname:[RootViewController description] imagename:@"1--VR专区_03hui" title:@"推荐"];
-    [self addChildViewControllerWithClassname:[UIViewController description] imagename:@"11_03" title:@"搜索"];
+    [self addChildViewControllerWithClassname:[SearchViewController description] imagename:@"11_03" title:@"搜索"];
     [self addChildViewControllerWithClassname:[MakeMoneyViewController description]imagename:@"22_03" title:@"赚钱"];
     [self addChildViewControllerWithClassname:[MeTableViewController description] imagename:@"5_03" title:@"我的"];
     

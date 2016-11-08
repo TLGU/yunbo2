@@ -17,6 +17,7 @@
 #import <Reachability/Reachability.h>
 #import <MyObjectCoding/NSObject+NSCoding.h>
 #import <JSONModel/JSONModel.h>
+#import "SVProgressHUD.h"
 //系统主题定义(颜色字体)
 #import "Theme.h"
 //常用宏定义

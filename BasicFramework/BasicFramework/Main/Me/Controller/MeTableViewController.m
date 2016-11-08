@@ -34,7 +34,7 @@ static NSString * reuseIdentifier=@"reuseIdentifier";
         NSMutableArray *itemArr1=[NSMutableArray arrayWithCapacity:7];
         [_meItems addObject:itemArr1];
         [_meItems addObject:itemArr0];
-        for (int i=0; i<6; i++)
+        for (int i=0; i<5; i++)
         {
             NSMutableDictionary *itemArr1Dic=[NSMutableDictionary dictionary];
             itemArr1Dic[@"icon"]=[NSString stringWithFormat:@"me_icon_%d",i];
@@ -42,11 +42,11 @@ static NSString * reuseIdentifier=@"reuseIdentifier";
             switch (i)
             {
                 case 0:itemArr1Dic[@"title"]=@"会员升级";break;
-                case 1:itemArr1Dic[@"title"]=@"我的分享";break;
-                case 2:itemArr1Dic[@"title"]=@"下载管理";break;
-                case 3:itemArr1Dic[@"title"]=@"最近播放";break;
-                case 4:itemArr1Dic[@"title"]=@"我的收藏";break;
-                case 5:itemArr1Dic[@"title"]=@"现金流水";break;
+//                case 1:itemArr1Dic[@"title"]=@"我的分享";break;
+                case 1:itemArr1Dic[@"title"]=@"下载管理";break;
+                case 2:itemArr1Dic[@"title"]=@"最近播放";break;
+                case 3:itemArr1Dic[@"title"]=@"我的收藏";break;
+                case 4:itemArr1Dic[@"title"]=@"现金流水";break;
                 default:break;
             }
             [itemArr1 addObject:itemArr1Dic];
@@ -75,6 +75,8 @@ static NSString * reuseIdentifier=@"reuseIdentifier";
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuseIdentifier];
     self.tableView.tableHeaderView=self.tableHeader;
+    self.tableView.contentInset=UIEdgeInsetsMake(0, 0, 49, 0);
+    self.tableView.scrollIndicatorInsets=self.tableView.contentInset;
     
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -105,13 +107,25 @@ static NSString * reuseIdentifier=@"reuseIdentifier";
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if (kScreenHeight>=667) {
+        return 10;
+    }
     return 2.5;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (kScreenHeight>=667) {
+        return 10;
+    }
     return 2.5;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (kScreenHeight>=667) {
+        return 60;
+    }
+    return 44;
+}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

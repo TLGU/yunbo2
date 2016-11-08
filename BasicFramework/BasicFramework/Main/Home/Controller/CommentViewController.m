@@ -14,9 +14,11 @@
 
 @implementation CommentViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.collectionView.contentInset=UIEdgeInsetsMake(0, 0, 49+64, 0);
+    self.collectionView.scrollIndicatorInsets=self.collectionView.contentInset;
 }
 
 - (void)didReceiveMemoryWarning {

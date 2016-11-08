@@ -30,9 +30,7 @@
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
     [[UIBarButtonItem appearance]setTitleTextAttributes:dic forState:UIControlStateNormal];
     
-//        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
-//    UIImage *backItemImage = [[UIImage imageNamed:@"back"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 0, 0) resizingMode:UIImageResizingModeStretch];
-//    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setBackButtonBackgroundImage:backItemImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+
     
     
 }
@@ -66,10 +64,13 @@
 -(void)backAction:(id)sender
 {
     [self popViewControllerAnimated:YES];
+    
 }
 
 
--(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
     return UIInterfaceOrientationMaskPortrait;
 }
 -(void)loginStatusChanged:(NSNotification *)notifi
@@ -83,20 +84,25 @@
         
         
 }
-    -(UIStatusBarStyle)preferredStatusBarStyle{
+    -(UIStatusBarStyle)preferredStatusBarStyle
+{
         return UIStatusBarStyleLightContent;
-    }
+}
     
     //设置状态栏颜色
-- (void)setStatusBarBackgroundColor:(UIColor *)color {
+- (void)setStatusBarBackgroundColor:(UIColor *)color
+{
     
     UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
     NSLog(@"statusBar.backgroundColor--->%@",statusBar.backgroundColor);
-    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)])
+    {
         statusBar.backgroundColor = color;
     }
+
 }
-    -(void)viewWillAppear:(BOOL)animated{
+    -(void)viewWillAppear:(BOOL)animated
+{
         [super viewWillAppear:animated];
         
         //设置导航条透明度
